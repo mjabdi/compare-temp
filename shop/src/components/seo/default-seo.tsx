@@ -29,12 +29,12 @@ const DefaultSeo = () => {
           href: '/manifest.json',
         },
       ]}
-      title={settings?.seo?.metaTitle}
+      title={"Compare Supplements"}
       titleTemplate={`${
         settings?.seo?.metaTitle || settings?.siteTitle || 'E-Commerce'
       } | %s`}
       defaultTitle="Compare Supplements"
-      description={settings?.seo?.metaDescription || settings?.siteSubtitle}
+      description={"Find your supplements at the best price in the market."}
       canonical={settings?.seo?.canonicalUrl}
       openGraph={{
         title: settings?.seo?.ogTitle,
