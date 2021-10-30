@@ -69,7 +69,7 @@ let AuthController = class AuthController {
         content += `<p>name : ${name} </p>`;
         content += `<p>subject : ${subject} </p>`;
         content += `<p>description : ${description} </p>`;
-        (0, mail_sender_1.sendMail)(process.env.MailAccount, subject, content);
+        (0, mail_sender_1.sendMail)("hello@compare-supplements.co.uk", subject, content);
         return {
             success: true,
             message: 'Thank you for contacting us. We will get back to you soon.',
