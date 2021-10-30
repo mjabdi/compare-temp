@@ -28,8 +28,6 @@ const addresses_module_1 = require("./addresses/addresses.module");
 const imports_module_1 = require("./imports/imports.module");
 const auth_module_1 = require("./auth/auth.module");
 const refunds_module_1 = require("./refunds/refunds.module");
-const serve_static_1 = require("@nestjs/serve-static");
-const path_1 = require("path");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -55,9 +53,6 @@ AppModule = __decorate([
             imports_module_1.ImportsModule,
             auth_module_1.AuthModule,
             refunds_module_1.RefundsModule,
-            serve_static_1.ServeStaticModule.forRoot({
-                rootPath: (0, path_1.join)(__dirname, '..', 'client', 'static'),
-            }),
         ],
         controllers: [],
         providers: [],
