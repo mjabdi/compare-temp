@@ -30,9 +30,6 @@ const DefaultSeo = () => {
         },
       ]}
       title={"Compare Supplements"}
-      titleTemplate={`${
-        settings?.seo?.metaTitle || settings?.siteTitle || 'E-Commerce'
-      } | %s`}
       defaultTitle="Compare Supplements"
       description={"Find your supplements at the best price in the market."}
       canonical={settings?.seo?.canonicalUrl}
