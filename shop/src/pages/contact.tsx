@@ -31,13 +31,11 @@ export const ContactPage = () => {
               {t('text-address')}
             </span>
             <span className="text-sm text-body">
-              {!isEmpty(formatAddress(settings?.contactDetails?.location))
-                ? formatAddress(settings?.contactDetails?.location)
-                : t('common:text-no-address')}
+              Unit 23, Shaftesbury Centre, London W10 6BN
             </span>
           </div>
 
-          <div className="flex flex-col mb-8">
+          {/* <div className="flex flex-col mb-8">
             <span className="font-semibold text-heading mb-3">
               {t('text-phone')}
             </span>
@@ -46,7 +44,7 @@ export const ContactPage = () => {
                 ? settings?.contactDetails?.contact
                 : t('text-no-contact')}
             </span>
-          </div>
+          </div> */}
           {settings?.contactDetails?.website && (
             <div className="flex flex-col mb-8">
               <span className="font-semibold text-heading mb-3">
@@ -54,20 +52,20 @@ export const ContactPage = () => {
               </span>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-body">
-                  {settings?.contactDetails?.website}
+                https://www.compare-supplements.co.uk/
                 </span>
-                <a
+                {/* <a
                   href={settings?.contactDetails?.website ?? '#'}
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-accent font-semibold hover:text-accent-hover focus:outline-none focus:text-blue-500"
                 >
                   {t('text-visit-site')}
-                </a>
+                </a> */}
               </div>
             </div>
           )}
-
+{/* 
           <div className="flex flex-col mb-8">
             <span className="font-semibold text-heading mb-4">
               {t('text-follow-us')}
@@ -91,7 +89,7 @@ export const ContactPage = () => {
                 )
               )}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Contact form */}
