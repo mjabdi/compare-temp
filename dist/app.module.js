@@ -56,7 +56,7 @@ AppModule = __decorate([
             auth_module_1.AuthModule,
             refunds_module_1.RefundsModule,
             serve_static_1.ServeStaticModule.forRoot({
-                rootPath: (0, path_1.join)(__dirname, '..', 'client'),
+                rootPath: (0, path_1.join)(__dirname, '..', 'client', 'static'),
             }),
         ],
         controllers: [],

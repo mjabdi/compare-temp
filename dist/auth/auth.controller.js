@@ -16,6 +16,7 @@ exports.AuthController = void 0;
 const openapi = require("@nestjs/swagger");
 const common_1 = require("@nestjs/common");
 const auth_service_1 = require("./auth.service");
+const mail_sender_1 = require("../utils/mail-sender");
 const create_auth_dto_1 = require("./dto/create-auth.dto");
 let AuthController = class AuthController {
     constructor(authService) {
@@ -61,6 +62,14 @@ let AuthController = class AuthController {
         return this.authService.me();
     }
     contactUs(addPointsDto) {
+        const { name, email, subject, description } = addPointsDto;
+        console.log({ name, email, subject, description });
+        let content = "";
+        content += `<p>from : ${email} </p>`;
+        content += `<p>name : ${name} </p>`;
+        content += `<p>subject : ${subject} </p>`;
+        content += `<p>description : ${description} </p>`;
+        (0, mail_sender_1.sendMail)(process.env.MailAccount, subject, content);
         return {
             success: true,
             message: 'Thank you for contacting us. We will get back to you soon.',
